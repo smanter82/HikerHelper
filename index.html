@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Gardening app header -->
+    <div class="row">
+      <div class="col s12"><h3>Hiking App!</h3></div>
+    </div>
+
+    <!-- Forecast  -->
+    <div class="container">
+      <div class="row">
+        <div class="col s4 zipcode">
+           
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Zip Code" name="search">
+                </div>
+            
+        </div>
+        <div class="col s8 forcast">FORCAST
+            <div id="currentCity">
+                <h4>City 8/15/2020</h4>
+              </div>
+              <div class="current" id="currentTemp">Temperature: 80 deg F</div>
+              <div class="current" id="currentHumid">Humidity: 50%</div>
+              <div class="current" id="currentWind">Wind Speed: 4.7 MPH</div>
+              <div class="current" id="currentUv">UV Index: 10</div>
+        </div>
+      </div>
+
+      <!--rainfall meter and 5 day forcast-->
+      <div class="row">
+        <div class="col s2"><p>Caution</p></div>
+        <div class="col s2"><p>day 1</p></div>
+        <div class="col s2"><p>day 2</p></div>
+        <div class="col s2"><p>day 3</p></div>
+        <div class="col s2"><p>day 4</p></div>
+        <div class="col s2"><p>day 5</p></div>
+      </div>
+
+      <!--Plant and pest search boxes-->
+
+      <div class="row grid">
+        <div class="plant-search">Trail Search
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Zip Code" name="search">
+                </div>
+        </div>
+        <div class="pest-search">Map?
+              <div class="search-container ">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Pest name" name="search">
+                </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+  </body>
 </html>
