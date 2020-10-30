@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(31, 72, 56);
+}
+
+.col {
+  background-color: rgb(164, 228, 164);
+  text-align: center;
+}
+
+.forcast {
+  background-color: aqua;
+}
+
+.plant-search {
+  background-color: rgb(98, 130, 186);
+  grid-column: 1;
+  margin-right: 5px;
+  padding: 10px;
+  
+}
+
+.pest-search {
+  background-color: rgb(27, 19, 113);
+  grid-column: 2;
+  margin-left: 5px;
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .plant-search { grid-area: 1 / span 2}
+    .pest-search { grid-area: 2 / span 2}
