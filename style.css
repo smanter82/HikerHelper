@@ -7,30 +7,49 @@ body {
   text-align: center;
 }
 
-.forcast {
-  background-color: aqua;
+.day {
+  background-color: rgb(112, 172, 131);
+  border-style: solid;
+  border-width: 10px;
+  border-color:rgb(31, 72, 56);
 }
 
-.plant-search {
+.zipcode {
+  border-style: solid;
+  border-width: 10px;
+  border-color:rgb(31, 72, 56);
+  height: 100%;
+}
+
+.forcast {
+  background-color: rgb(145, 189, 189);
+  border-style: solid;
+  border-width: 10px;
+  border-color:rgb(31, 72, 56);
+}
+
+.trail-search {
   background-color: rgb(98, 130, 186);
   grid-column: 1;
   margin-right: 5px;
   padding: 10px;
-  
 }
 
-.pest-search {
-  background-color: rgb(27, 19, 113);
+.map-search {
+  background-color: rgb(98, 130, 186);
   grid-column: 2;
   margin-left: 5px;
   padding: 10px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: auto auto;
+.oneoftwo {
+  background-color: rgb(88, 155, 133);
+  border-style: solid;
+  border-width: 8px;
+  border-color:rgb(31, 72, 56);
+  height: auto;
 }
 
-@media only screen and (max-width: 600px) {
-    .plant-search { grid-area: 1 / span 2}
-    .pest-search { grid-area: 2 / span 2}
+.material-icons {
+  font-size: 40px;
+}
