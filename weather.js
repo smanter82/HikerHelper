@@ -143,11 +143,11 @@ $(document).ready(function(){
                 let dateE = response.list[32].dt_txt;
 
                 //Set date text
-                date1.text(dateA);
-                date2.text(dateB);
-                date3.text(dateC);
-                date4.text(dateD);
-                date5.text(dateE);
+                date1.find(".text").text(dateA);
+                date2.find(".text").text(dateB);
+                date3.find(".text").text(dateC);
+                date4.find(".text").text(dateD);
+                date5.find(".text").text(dateE);
 
                 //Grab icon data from API
                 let iconA = response.list[0].weather[0].icon;
@@ -155,13 +155,15 @@ $(document).ready(function(){
                 let iconC = response.list[16].weather[0].icon;
                 let iconD = response.list[24].weather[0].icon;
                 let iconE = response.list[32].weather[0].icon;
-                
+
                 //Add img of icons
-                date1.append(`<img src="http://openweathermap.org/img/wn/${iconA}@2x.png">`);
-                date2.append(`<img src="http://openweathermap.org/img/wn/${iconB}@2x.png">`);
-                date3.append(`<img src="http://openweathermap.org/img/wn/${iconC}@2x.png">`);
-                date4.append(`<img src="http://openweathermap.org/img/wn/${iconD}@2x.png">`);
-                date5.append(`<img src="http://openweathermap.org/img/wn/${iconE}@2x.png">`);
+                $('#icon1').attr('src', `http://openweathermap.org/img/wn/${iconA}@2x.png`);
+                $('#icon2').attr('src', `http://openweathermap.org/img/wn/${iconB}@2x.png`);
+                $('#icon3').attr('src', `http://openweathermap.org/img/wn/${iconC}@2x.png`);
+                $('#icon4').attr('src', `http://openweathermap.org/img/wn/${iconD}@2x.png`);
+                $('#icon5').attr('src', `http://openweathermap.org/img/wn/${iconE}@2x.png`);
+                
+                
 
                 //Grab temp data from API
                 let tempA = response.list[0].main.temp;
