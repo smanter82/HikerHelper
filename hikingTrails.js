@@ -28,7 +28,7 @@ $(document).ready(function(){
             //Get trail information for area requested in zip code search.
             function getTrailInput() {
             $('#submitBtn').on("click", getTrailInput);
-
+        
             let queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&key=200961808-6d569e74377269afd022c8e12b63296c" 
             // let trailImput = $('#trailInput').val();
 
@@ -39,8 +39,10 @@ $(document).ready(function(){
             }).then(function(response){
                 // $(body).append(JSON.stringify(response))
                 console.log(response)
-            })
             }
+            })
+        }
 
             // getTrailInput()
         })
+        
