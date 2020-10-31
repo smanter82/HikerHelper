@@ -56,6 +56,9 @@ $(document).ready(function(){
         }).then(function(response) {
             //Test console.log response to ensure AJAX request is successful
             console.log(response);
+
+            //Clear fields before 
+            $('#currentCity').empty();
             
             //Define a <section> tag to hold the City name based on zip code captured.
             let cityName = response.name;
@@ -73,16 +76,19 @@ $(document).ready(function(){
             //Append Temp (Check on how to convert to Fahrenheit)
             let cityTemp = response.main.temp;
             let temp = $(`<section id="temp">Temp: ${cityTemp}</section>`);
+            $('#currentTemp').empty();
             $('#currentTemp').append(temp);
 
             //Append Humidity
             let cityHumidity = response.main.humidity;
             let humidity = $(`<section id="humidity">Humidity: ${cityHumidity}</section>`);
+            $('#currentHumid').empty();
             $('#currentHumid').append(humidity);
 
             //Append Wind Speed
             let cityWindSpeed = response.wind.speed;
             let windSpeed = $(`<section id="windSpeed">Wind Speed: ${cityWindSpeed}</section>`);
+            $('#currentWind').empty();
             $('#currentWind').append(windSpeed);
 
             //Multi-use variables for subsequent AJAX requests
