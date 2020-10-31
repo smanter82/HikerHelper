@@ -4,11 +4,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation Starter Template</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <title>materialize Starter Template</title>
+    
+    <!-- icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -18,7 +22,7 @@
   <body>
     <!-- Gardening app header -->
     <div class="row">
-      <div class="col s12"><h3>Hiking App!</h3></div>
+      <div class="col s12"><h3><i class="material-icons">directions_walk</i>Hiking App!</h3></div>
     </div>
 
     <!-- Forecast  -->
@@ -27,11 +31,18 @@
         <div class="col s4 zipcode">
            
             <div class="search-container">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Zip Code" name="search">
+                  <form class="col s12 ">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea" ></textarea>
+                        <label for="textarea1">Enter zipcode</label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-            
+
         </div>
+
         <div class="col s8 forcast">FORCAST
             <div id="currentCity">
                 <h4>City 8/15/2020</h4>
@@ -45,36 +56,65 @@
 
       <!--rainfall meter and 5 day forcast-->
       <div class="row">
-        <div class="col s2"><p>Caution</p></div>
-        <div class="col s2"><p>day 1</p></div>
-        <div class="col s2"><p>day 2</p></div>
-        <div class="col s2"><p>day 3</p></div>
-        <div class="col s2"><p>day 4</p></div>
-        <div class="col s2"><p>day 5</p></div>
+        <div class="col s2 day"><p>Caution</p></div>
+        <div class="col s2 day"><p>Day 1</p></div>
+        <div class="col s2 day"><p>Day 2</p></div>
+        <div class="col s2 day"><p>Day 3</p></div>
+        <div class="col s2 day"><p>Day 4</p></div>
+        <div class="col s2 day"><p>Day 5</p></div>
       </div>
 
       <!--Plant and pest search boxes-->
 
-      <div class="row grid">
-        <div class="plant-search">Trail Search
-            <div class="search-container">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Zip Code" name="search">
-                </div>
-        </div>
-        <div class="pest-search">Map?
-              <div class="search-container ">
-                  <form action="/action_page.php">
-                    <input type="text" placeholder="Pest name" name="search">
-                </div>
-        </div>
-      </div>
+
     </div>
 
+    <div class="container">
 
+        <div class="row blue">
+            
+            <div class="col s6 oneoftwo">
 
+              <div class="search-container ">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Zipcode" name="search">
+                </form>
+              </div>
+              
 
-  
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Tempora cupiditate commodi reprehenderit saepe fuga illo
+                enim cum. Fugit, reiciendis tempore consequuntur veniam 
+                perspiciatis cupiditate dolorem quaerat vel id! Quae 
+                obcaecati numquam, fugit iste expedita, sapiente aliquam 
+                commodi nobis nesciunt quasi inventore, sequi quidem
+                laudantium perferendis et consectetur! Quisquam, cumque 
+                ratione.
+
+           
+            </div>
+
+            <div class="col s6 oneoftwo">
+
+              <div class="search-container ">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Map name" name="search">
+                </form>
+              </div>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Tempora cupiditate commodi reprehenderit saepe fuga illo
+              enim cum. Fugit, reiciendis tempore consequuntur veniam 
+              perspiciatis cupiditate dolorem quaerat vel id! Quae 
+              obcaecati numquam, fugit iste expedita, sapiente aliquam 
+              commodi nobis nesciunt quasi inventore, sequi quidem
+              laudantium perferendis et consectetur! Quisquam, cumque 
+              ratione.
+
+         
+          </div>
+        </div>
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
