@@ -11,13 +11,13 @@ body {
   background-color: rgb(112, 172, 131);
   border-style: solid;
   border-width: 10px;
-  border-color:rgb(31, 72, 56);
+  border-color: rgb(31, 72, 56);
 }
 
 .zipcode {
   border-style: solid;
   border-width: 10px;
-  border-color:rgb(31, 72, 56);
+  border-color: rgb(31, 72, 56);
   height: 100%;
 }
 
@@ -25,7 +25,7 @@ body {
   background-color: rgb(145, 189, 189);
   border-style: solid;
   border-width: 10px;
-  border-color:rgb(31, 72, 56);
+  border-color: rgb(31, 72, 56);
 }
 
 .trail-search {
@@ -46,8 +46,37 @@ body {
   background-color: rgb(88, 155, 133);
   border-style: solid;
   border-width: 8px;
-  border-color:rgb(31, 72, 56);
+  border-color: rgb(31, 72, 56);
   height: auto;
+}
+
+.trailListStyles {
+  background-color: rgb(88, 155, 133);
+  border-style: solid;
+  border-width: 8px;
+  border-color: rgb(31, 72, 56);
+  height: 250px;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.trailListResults {
+  align-content: flex-start;
+  color: black;
+  border-bottom: 1px, black;
+}
+.trailListCheckBox {
+  color: black;
+  border-bottom: 1px, black;
+}
+
+.trailName {
+  font-weight: bold;
+  font-size: medium;
+  color: black;
+}
+.trailData {
+  font-size: small;
 }
 
 .material-icons {
