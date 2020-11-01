@@ -190,16 +190,17 @@ $(document).ready(function(){
             });
 
             //AJAX request from for Hiking Trails API
-            let trailURL = `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=10&key=200961813-537b8cc50123339ddfc558c885477477`
-            $.ajax({
-                url: trailURL,
-                method: "GET",
-                error: function(err){
-                    alert(err);
-                }
-            }).then(function(response) {
-                console.log(response)
-            });
+            // getTrailInput()
+            // let trailURL = `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=10&key=200961813-537b8cc50123339ddfc558c885477477`
+            // $.ajax({
+            //     url: trailURL,
+            //     method: "GET",
+            //     error: function(err){
+            //         alert(err);
+            //     }
+            // }).then(function(response) {
+            //     console.log(response)
+            // });
         });
         
         //Set Local Storage. Must stay withing curly brackets for searchCity function
