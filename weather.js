@@ -27,7 +27,12 @@ $(document).ready(function(){
     $("#submitBtn").on("click", searchCity);
     //$('#submitPlants').on('click', searchTrail);
 
-
+    $("#textarea1").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#submitBtn").click();
+            $("#textarea1").val('');
+        }
+    });
 
 
     //Define searchCity function
