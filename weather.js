@@ -3,7 +3,6 @@
 // WEATHER API: https://openweathermap.org/api
 // API Key: 0f848c85d2b3dd23041f7c21a9bd6d0b
 // Current Weather by ZIP code: https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
-// Current weather by City name: https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b
 // 5 day/3 hour forecast by Zip code: //https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode},us&appid=0f848c85d2b3dd23041f7c21a9bd6d0b
 // UV Index: http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b
 
