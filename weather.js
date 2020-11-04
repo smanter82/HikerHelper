@@ -1,3 +1,5 @@
+//Reflecting code from previous HW assignment for class https://github.com/EddiePhi/Weather-Dashboard
+
 // WEATHER API: https://openweathermap.org/api
 // API Key: 0f848c85d2b3dd23041f7c21a9bd6d0b
 // Current Weather by ZIP code: https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
@@ -82,14 +84,15 @@ $(document).ready(function () {
 
       //Append Temp (Check on how to convert to Fahrenheit)
       let cityTemp = response.main.temp;
-      let temp = $(`<section id="temp">Temp: ${cityTemp}</section>`);
+      let tempF = Math.round(((cityTemp - 273.15) * 9/5 + 32)*100)/100
+      let temp = $(`<section id="temp">Temp: ${tempF}°F</section>`);
       $("#currentTemp").empty();
       $("#currentTemp").append(temp);
 
       //Append Humidity
       let cityHumidity = response.main.humidity;
       let humidity = $(
-        `<section id="humidity">Humidity: ${cityHumidity}</section>`
+        `<section id="humidity">Humidity: ${cityHumidity}%</section>`
       );
       $("#currentHumid").empty();
       $("#currentHumid").append(humidity);
@@ -97,7 +100,7 @@ $(document).ready(function () {
       //Append Wind Speed
       let cityWindSpeed = response.wind.speed;
       let windSpeed = $(
-        `<section id="windSpeed">Wind Speed: ${cityWindSpeed}</section>`
+        `<section id="windSpeed">Wind Speed: ${cityWindSpeed} mph</section>`
       );
       $("#currentWind").empty();
       $("#currentWind").append(windSpeed);
@@ -146,6 +149,14 @@ $(document).ready(function () {
         let date4 = $("#date4");
         let date5 = $("#date5");
 
+        date1.empty();
+        date2.empty();
+        date3.empty();
+        date4.empty();
+        date5.empty();
+
+
+
         //Grab date data from API
         let dateA = response.list[0].dt_txt;
         let dateB = response.list[8].dt_txt;
@@ -154,11 +165,11 @@ $(document).ready(function () {
         let dateE = response.list[32].dt_txt;
 
         //Set date text
-        date1.find(".text").text(dateA);
-        date2.find(".text").text(dateB);
-        date3.find(".text").text(dateC);
-        date4.find(".text").text(dateD);
-        date5.find(".text").text(dateE);
+        date1.append(`<div class="text">${dateA}</div>`);
+        date2.append(`<div class="text">${dateB}</div>`);
+        date3.append(`<div class="text">${dateC}</div>`);
+        date4.append(`<div class="text">${dateD}</div>`);
+        date5.append(`<div class="text">${dateE}</div>`);
 
         //Grab icon data from API
         let iconA = response.list[0].weather[0].icon;
@@ -168,39 +179,30 @@ $(document).ready(function () {
         let iconE = response.list[32].weather[0].icon;
 
         //Add img of icons
-        $("#icon1").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconA}@2x.png`
-        );
-        $("#icon2").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconB}@2x.png`
-        );
-        $("#icon3").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconC}@2x.png`
-        );
-        $("#icon4").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconD}@2x.png`
-        );
-        $("#icon5").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconE}@2x.png`
-        );
+        date1.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconA}@2x.png"/>`);
+        date2.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconB}@2x.png"/>`);
+        date3.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconC}@2x.png"/>`);
+        date4.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconD}@2x.png"/>`);
+        date5.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconE}@2x.png"/>`);
 
         //Grab temp data from API
+        //Math.round(((cityTemp - 273.15) * 9/5 + 32)*100)/100
         let tempA = response.list[0].main.temp;
+        let tempAF = Math.round(((tempA - 273.15) * 9/5 + 32)*100)/100;
         let tempB = response.list[8].main.temp;
+        let tempBF = Math.round(((tempB - 273.15) * 9/5 + 32)*100)/100;
         let tempC = response.list[16].main.temp;
+        let tempCF = Math.round(((tempC - 273.15) * 9/5 + 32)*100)/100;
         let tempD = response.list[24].main.temp;
+        let tempDF = Math.round(((tempD - 273.15) * 9/5 + 32)*100)/100;
         let tempE = response.list[32].main.temp;
+        let tempEF = Math.round(((tempE - 273.15) * 9/5 + 32)*100)/100;
 
-        date1.append(`<section>Temp: ${tempA}</section>`);
-        date2.append(`<section>Temp: ${tempB}</section>`);
-        date3.append(`<section>Temp: ${tempC}</section>`);
-        date4.append(`<section>Temp: ${tempD}</section>`);
-        date5.append(`<section>Temp: ${tempE}</section>`);
+        date1.append(`<section>Temp: ${tempAF}°F</section>`);
+        date2.append(`<section>Temp: ${tempBF}°F</section>`);
+        date3.append(`<section>Temp: ${tempCF}°F</section>`);
+        date4.append(`<section>Temp: ${tempDF}°F</section>`);
+        date5.append(`<section>Temp: ${tempEF}°F</section>`);
 
         let humidityA = response.list[0].main.humidity;
         let humidityB = response.list[8].main.humidity;
@@ -208,11 +210,11 @@ $(document).ready(function () {
         let humidityD = response.list[24].main.humidity;
         let humidityE = response.list[32].main.humidity;
 
-        date1.append(`<section>Humidity: ${humidityA}</section>`);
-        date2.append(`<section>Humidity: ${humidityB}</section>`);
-        date3.append(`<section>Humidity: ${humidityC}</section>`);
-        date4.append(`<section>Humidity: ${humidityD}</section>`);
-        date5.append(`<section>Humidity: ${humidityE}</section>`);
+        date1.append(`<section>Humidity: ${humidityA}%</section>`);
+        date2.append(`<section>Humidity: ${humidityB}%</section>`);
+        date3.append(`<section>Humidity: ${humidityC}%</section>`);
+        date4.append(`<section>Humidity: ${humidityD}%</section>`);
+        date5.append(`<section>Humidity: ${humidityE}%</section>`);
       });
     });
   };
@@ -264,14 +266,15 @@ $(document).ready(function () {
 
       //Append Temp (Check on how to convert to Fahrenheit)
       let cityTemp = response.main.temp;
-      let temp = $(`<section id="temp">Temp: ${cityTemp}</section>`);
+      let tempF = Math.round(((cityTemp - 273.15) * 9/5 + 32)*100)/100
+      let temp = $(`<section id="temp">Temp: ${tempF}°F</section>`);
       $("#currentTemp").empty();
       $("#currentTemp").append(temp);
 
       //Append Humidity
       let cityHumidity = response.main.humidity;
       let humidity = $(
-        `<section id="humidity">Humidity: ${cityHumidity}</section>`
+        `<section id="humidity">Humidity: ${cityHumidity}%</section>`
       );
       $("#currentHumid").empty();
       $("#currentHumid").append(humidity);
@@ -328,6 +331,14 @@ $(document).ready(function () {
         let date4 = $("#date4");
         let date5 = $("#date5");
 
+        date1.empty();
+        date2.empty();
+        date3.empty();
+        date4.empty();
+        date5.empty();
+
+
+
         //Grab date data from API
         let dateA = response.list[0].dt_txt;
         let dateB = response.list[8].dt_txt;
@@ -336,11 +347,11 @@ $(document).ready(function () {
         let dateE = response.list[32].dt_txt;
 
         //Set date text
-        date1.find(".text").text(dateA);
-        date2.find(".text").text(dateB);
-        date3.find(".text").text(dateC);
-        date4.find(".text").text(dateD);
-        date5.find(".text").text(dateE);
+        date1.append(`<div class="text">${dateA}</div>`);
+        date2.append(`<div class="text">${dateB}</div>`);
+        date3.append(`<div class="text">${dateC}</div>`);
+        date4.append(`<div class="text">${dateD}</div>`);
+        date5.append(`<div class="text">${dateE}</div>`);
 
         //Grab icon data from API
         let iconA = response.list[0].weather[0].icon;
@@ -350,39 +361,30 @@ $(document).ready(function () {
         let iconE = response.list[32].weather[0].icon;
 
         //Add img of icons
-        $("#icon1").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconA}@2x.png`
-        );
-        $("#icon2").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconB}@2x.png`
-        );
-        $("#icon3").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconC}@2x.png`
-        );
-        $("#icon4").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconD}@2x.png`
-        );
-        $("#icon5").attr(
-          "src",
-          `http://openweathermap.org/img/wn/${iconE}@2x.png`
-        );
+        date1.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconA}@2x.png"/>`);
+        date2.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconB}@2x.png"/>`);
+        date3.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconC}@2x.png"/>`);
+        date4.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconD}@2x.png"/>`);
+        date5.append(`<img id="icon" alt="weather-icon" src="http://openweathermap.org/img/wn/${iconE}@2x.png"/>`);
 
         //Grab temp data from API
+        //Math.round(((cityTemp - 273.15) * 9/5 + 32)*100)/100
         let tempA = response.list[0].main.temp;
+        let tempAF = Math.round(((tempA - 273.15) * 9/5 + 32)*100)/100;
         let tempB = response.list[8].main.temp;
+        let tempBF = Math.round(((tempB - 273.15) * 9/5 + 32)*100)/100;
         let tempC = response.list[16].main.temp;
+        let tempCF = Math.round(((tempC - 273.15) * 9/5 + 32)*100)/100;
         let tempD = response.list[24].main.temp;
+        let tempDF = Math.round(((tempD - 273.15) * 9/5 + 32)*100)/100;
         let tempE = response.list[32].main.temp;
+        let tempEF = Math.round(((tempE - 273.15) * 9/5 + 32)*100)/100;
 
-        date1.append(`<section>Temp: ${tempA}</section>`);
-        date2.append(`<section>Temp: ${tempB}</section>`);
-        date3.append(`<section>Temp: ${tempC}</section>`);
-        date4.append(`<section>Temp: ${tempD}</section>`);
-        date5.append(`<section>Temp: ${tempE}</section>`);
+        date1.append(`<section>Temp: ${tempAF}°F</section>`);
+        date2.append(`<section>Temp: ${tempBF}°F</section>`);
+        date3.append(`<section>Temp: ${tempCF}°F</section>`);
+        date4.append(`<section>Temp: ${tempDF}°F</section>`);
+        date5.append(`<section>Temp: ${tempEF}°F</section>`);
 
         let humidityA = response.list[0].main.humidity;
         let humidityB = response.list[8].main.humidity;
@@ -390,11 +392,11 @@ $(document).ready(function () {
         let humidityD = response.list[24].main.humidity;
         let humidityE = response.list[32].main.humidity;
 
-        date1.append(`<section>Humidity: ${humidityA}</section>`);
-        date2.append(`<section>Humidity: ${humidityB}</section>`);
-        date3.append(`<section>Humidity: ${humidityC}</section>`);
-        date4.append(`<section>Humidity: ${humidityD}</section>`);
-        date5.append(`<section>Humidity: ${humidityE}</section>`);
+        date1.append(`<section>Humidity: ${humidityA}%</section>`);
+        date2.append(`<section>Humidity: ${humidityB}%</section>`);
+        date3.append(`<section>Humidity: ${humidityC}%</section>`);
+        date4.append(`<section>Humidity: ${humidityD}%</section>`);
+        date5.append(`<section>Humidity: ${humidityE}%</section>`);
       });
     });
 
