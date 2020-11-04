@@ -2,6 +2,7 @@ $("#submitBtn").on("click", searchZip);
 
 let getStorage = localStorage.getItem("savedDetails") || "[]";
 let storageParse = JSON.parse(getStorage);
+let lastTrail = []
 
 previousZip();
 
@@ -85,6 +86,7 @@ function searchZip() {
     }).then(function (response) {
       console.log(response);
       console.log(response.trails[0].name);
+      lastTrail = response.trails
       for (let i = 0; i < response.trails.length; i++) {
         let trailName = response.trails[i].name;
         let trailLocation = response.trails[i].location;
@@ -108,44 +110,48 @@ function searchZip() {
           <b>Difficulty:</b> ${trailDifficulty}
         </div>`);
       }
-    function renderMap() {
-      for (let i = 0; i < response.trails.length; i++) {
-      let lat = response.trails[i].latitude;
-      let lon = response.trails[i].longitude;
-      console.log(lat)
-      // TRAILFORKS WIDGET START
-      // Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156
-      $("#renderedMap").append(`
-      <div class="TrailforksRegionInfo" 
-      data-w="600px" 
-      data-h="150px" 
-      data-rid="3156" 
-      data-counts="1" 
-      data-stats="1">
-    </div>
-    <div class="TrailforksWidgetMap" 
-      data-w="600px" 
-      data-h="400px" 
-      data-rid="3156" 
-      data-activitytype="1" 
-      data-maptype="trailforks" 
-      data-trailstyle="difficulty" 
-      data-controls="1" 
-      data-list="0" 
-      data-dml="1" 
-      data-layers="labels,poi,polygon,directory,region" 
-      data-z="" 
-      data-lat=${lat} 
-      data-lon=${lon}
-      data-hideunsanctioned="0">
-    </div>`)
-    // TRAILFORKS WIDGET END
-    }
-    
 
-  
-    };
-    $(".trailButton").on("click", renderMap);
-  });
+    });
+     
   })
 }
+//lastTrail.find <--Look this up.
+$(document).on("click", ".trailButton", function(){
+  // lastTrail.find(function($(this).text(),[i], arr),thisValue)
+  // array.find(function(currentValue, index, arr),thisValue)
+})
+function renderMap() {
+  for (let i = 0; i < response.trails.length; i++) {
+  let lat = response.trails[i].latitude;
+  let lon = response.trails[i].longitude;
+  console.log(lat)
+  // TRAILFORKS WIDGET START
+  // Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156
+  $("#renderedMap").append(`
+  <div class="TrailforksRegionInfo" 
+  data-w="600px" 
+  data-h="150px" 
+  data-rid="3156" 
+  data-counts="1" 
+  data-stats="1">
+</div>
+<div class="TrailforksWidgetMap" 
+  data-w="600px" 
+  data-h="400px" 
+  data-rid="3156" 
+  data-activitytype="1" 
+  data-maptype="trailforks" 
+  data-trailstyle="difficulty" 
+  data-controls="1" 
+  data-list="0" 
+  data-dml="1" 
+  data-layers="labels,poi,polygon,directory,region" 
+  data-z="" 
+  data-lat=${lat} 
+  data-lon=${lon}
+  data-hideunsanctioned="0">
+</div>`)
+// TRAILFORKS WIDGET END
+}
+
+};
