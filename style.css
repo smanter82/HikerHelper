@@ -20,11 +20,21 @@ body {
   background-color: #464646;
 }
 
-.jumbo{
-  background-color: rgb(112, 172, 131, 0.5);
-  margin-bottom: 40px;
+.head {
+  position: relative;
+  margin-bottom: 100px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  opacity: 0.9;
+  background-color: rgb(64, 79, 66);
+  font-size: 30px;
+}
 
+.icon-text {
+  font-size: 50px;
+}
+
+.material-icons {
+  font-size: 40px;
 }
 
 .col {
@@ -33,7 +43,6 @@ body {
   border-width: 8px;
   border-color: rgb(31, 72, 56, 0);
   font-family: 'M PLUS Rounded 1c', sans-serif;
-
 }
 
 .day {
@@ -64,8 +73,6 @@ body {
   grid-column: 2;
   margin-left: 5px;
   padding: 10px;
-
-
 }
 
 .oneoftwo {
@@ -75,8 +82,6 @@ body {
   border-color: rgba(53, 91, 76, 0);
   height: 275px;
   padding: 10px;
-
-
 }
 
 .trailListStyles {
@@ -90,6 +95,7 @@ body {
   align-content: flex-start;
   color: black;
 }
+
 .trailButton {
   background-color: rgb(31, 72, 56);
   color: white;
@@ -111,6 +117,8 @@ body {
   font-size: small;
 }
 
-.material-icons {
-  font-size: 40px;
+.footer-copyright {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  opacity: 0.8;
 }
