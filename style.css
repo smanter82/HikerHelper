@@ -20,13 +20,24 @@ body {
   background-color: #464646;
 }
 
+.jumbo{
+  background-color: rgb(112, 172, 131, 0.5);
+  margin-bottom: 40px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+
 .col {
   text-align: center;
-  border-radius: 10px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: rgb(31, 72, 56, 0);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
 }
 
 .day {
-  background-color: rgb(112, 172, 131, 0.4);
+  background-color: rgb(112, 172, 131, 0.8);
   border-style: hidden;
   border-width: 1px;
   border-color: rgb(31, 72, 56);
@@ -45,7 +56,7 @@ body {
   border-style: hidden;
   border-width: 10px;
   font-weight: bold;
-  background-color: rgb(112, 172, 131, 0.6);
+  background-color: rgb(112, 172, 131, 0.75);
 }
 
 .map-search {
@@ -53,22 +64,23 @@ body {
   grid-column: 2;
   margin-left: 5px;
   padding: 10px;
+
+
 }
 
 .oneoftwo {
-  background-color: rgb(88, 155, 133, 0.6);
+  background-color: rgba(109, 196, 167, 0.75);
   border-style: solid;
   border-width: 8px;
-  border-color: rgb(31, 72, 56, 0);
+  border-color: rgba(53, 91, 76, 0);
   height: 275px;
   padding: 10px;
+
+
 }
 
 .trailListStyles {
-  background-color: rgb(88, 155, 133, 0.6);
-  border-style: solid;
-  border-width: 8px;
-  border-color: rgb(31, 72, 56, 0);
+  background-color: rgba(99, 174, 149, 0.75);
   height: 275px;
   padding: 15px;
   overflow-y: scroll;
@@ -94,6 +106,7 @@ body {
   font-size: medium;
   color: black;
 }
+
 .trailData {
   font-size: small;
 }
