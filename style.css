@@ -1,38 +1,51 @@
 body {
-  background-color: rgb(31, 72, 56);
+  background-image: url(./Assets/download.jpg);
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
 }
 
 .col {
-  background-color: rgb(164, 228, 164);
   text-align: center;
+  border-radius: 10px;
 }
 
 .day {
-  background-color: rgb(112, 172, 131);
-  border-style: solid;
-  border-width: 10px;
+  background-color: rgb(112, 172, 131, 0.4);
+  border-style: hidden;
+  border-width: 1px;
   border-color: rgb(31, 72, 56);
+  font-weight: bold;
+  border-radius: 0px;
 }
 
 .zipcode {
-  border-style: solid;
   border-width: 10px;
-  border-color: rgb(31, 72, 56);
   height: 100%;
+  font-weight: bold;
+  color: black;
 }
 
 .forcast {
-  background-color: rgb(145, 189, 189);
-  border-style: solid;
+  border-style: hidden;
   border-width: 10px;
-  border-color: rgb(31, 72, 56);
-}
-
-.trail-search {
-  background-color: rgb(98, 130, 186);
-  grid-column: 1;
-  margin-right: 5px;
-  padding: 10px;
+  font-weight: bold;
+  background-color: rgb(112, 172, 131, 0.6);
 }
 
 .map-search {
@@ -43,19 +56,20 @@ body {
 }
 
 .oneoftwo {
-  background-color: rgb(88, 155, 133);
+  background-color: rgb(88, 155, 133, 0.6);
   border-style: solid;
   border-width: 8px;
-  border-color: rgb(31, 72, 56);
-  height: auto;
+  border-color: rgb(31, 72, 56, 0);
+  height: 275px;
+  padding: 10px;
 }
 
 .trailListStyles {
-  background-color: rgb(88, 155, 133);
+  background-color: rgb(88, 155, 133, 0.6);
   border-style: solid;
   border-width: 8px;
-  border-color: rgb(31, 72, 56);
-  height: 250px;
+  border-color: rgb(31, 72, 56, 0);
+  height: 275px;
   padding: 15px;
   overflow-y: scroll;
 }
