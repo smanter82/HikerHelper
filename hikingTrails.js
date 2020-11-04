@@ -35,26 +35,18 @@ function searchZip() {
         console.log(response.trails[i].name);
         $("#trailResults").append(`<div class="trailListResults">
         <div class="left-align">
-          <label>
-            <input
-              id="selectTrail"
-              type="checkbox"
-              class="filled-in"
-              checked=""
-            />
-            <span id="trailName" class="trailName">${trailName}</span>
-          </label>
+        <a class=" trailButton waves-effect waves-light btn-small">${trailName}</a>
         </div>
         <div id="trailLocation" class="left-align trailData">
-          Location: ${trailLocation}
+          <b>Location:</b> ${trailLocation}
         </div>
 
         <div id="trailSummary" class="left-align trailData">
-          Summary: ${trailSummary}
+          <b>Summary:</b> ${trailSummary}
         </div>
 
         <div id="trailRating" class="left-align trailData">
-          Difficulty: ${trailDifficulty}
+          <b>Difficulty:</b> ${trailDifficulty}
         </div>`);
       }
     });
