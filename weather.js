@@ -114,7 +114,7 @@ $(document).ready(function () {
         uvIndex.text("UV Index: " + cityUVIndex);
 
         if (cityUVIndex >= 0 && cityUVIndex < 3) {
-          uvIndex.css("backgroundColor", "green");
+          uvIndex.css("color", "green");
         } else if (cityUVIndex >= 3 && cityUVIndex < 6) {
           uvIndex.css("backgroundColor", "yellow");
         } else if (cityUVIndex >= 6 && cityUVIndex < 8) {
