@@ -13,6 +13,11 @@
       rel="stylesheet"
     />
 
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+
     <!-- Compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -27,8 +32,8 @@
   <body>
     <!-- Hiking app header -->
     <div class="row">
-      <div class="col s12">
-        <h3><i class="material-icons">directions_walk</i>Hiking App!</h3>
+      <div class="col s12 jumbo">
+        <h1><i class="material-icons">directions_walk</i>Hiking App!</h1>
       </div>
     </div>
 
@@ -41,6 +46,7 @@
               <div class="row">
                 <div class="input-field col s12">
                   <textarea
+                  maxlength="5"
                     id="textarea1"
                     class="materialize-textarea"
                   ></textarea>
@@ -132,13 +138,13 @@
 
     <div class="container">
       <div class="row">
-        <div id="trailResults" class="col l6 m6 s12 trailListStyles">
+        <div id="trailResults" class="col l6  m6 s12 trailListStyles">
           <div>
             <h6><b>Trails Nearby</b></h6>
           </div>
         </div>
 
-        <div class="col l6 m6 s12 oneoftwo">
+        <div class="col l6  m6 s12 oneoftwo">
           <div class="search-container bold-text">
             <form action="/action_page.php">
               <input type="text" placeholder="Map name" name="search" />
