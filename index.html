@@ -31,11 +31,17 @@
   </head>
   <body>
     <!-- Hiking app header -->
+
     <div class="row">
-      <div class="col s12 jumbo">
-        <h1><i class="material-icons">directions_walk</i>Hiking App!</h1>
+      <div class="col s12 head">
+         <p class="brand-logo center icon-text blue-grey-text text-lighten-4"><i class="material-icons ">directions_walk</i>Hiking App!</p>
       </div>
     </div>
+
+    <!-- Main div containing all content -->
+<main>
+
+  <div class="container main">
 
     <!-- Forecast  -->
     <div class="container">
@@ -69,10 +75,10 @@
           <div id="currentCity">
             <h4>City 8/15/2020</h4>
           </div>
-          <div class="current" id="currentTemp">Temperature: 80 deg F</div>
-          <div class="current" id="currentHumid">Humidity: 50%</div>
-          <div class="current" id="currentWind">Wind Speed: 4.7 MPH</div>
-          <div class="current" id="currentUv">UV Index: 10</div>
+          <div class="current" id="currentTemp">Temperature:  deg F</div>
+          <div class="current" id="currentHumid">Humidity: %</div>
+          <div class="current" id="currentWind">Wind Speed: MPH</div>
+          <div class="current" id="currentUv">UV Index: </div>
         </div>
       </div>
 
@@ -131,33 +137,82 @@
           <p>Day 5</p>
         </div>
       </div>
-
-      <!--trail search resuls and map-->
     </div>
-
-    <div class="container">
-      <div class="row">
-        <div id="trailResults" class="col l6  m6 s12 trailListStyles">
-          <div>
-            <h6><b>Trails Nearby</b></h6>
-          </div>
+      <!--trail search resuls and map-->
+    
+    <!-- TRAILFORKS WIDGET START -->
+          <!-- Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156 -->
+          <div class="TrailforksRegionInfo" 
+          data-w="600px" 
+          data-h="150px" 
+          data-rid="3156" 
+          data-counts="1" 
+          data-stats="1">
+        </div>
+        <div class="TrailforksWidgetMap" 
+          data-w="600px" 
+          data-h="400px" 
+          data-rid="3156" 
+          data-activitytype="1" 
+          data-maptype="trailforks" 
+          data-trailstyle="difficulty" 
+          data-controls="1" 
+          data-list="0" 
+          data-dml="1" 
+          data-layers="labels,poi,polygon,directory,region" 
+          data-z="" 
+          data-lat="" 
+          data-lon="" 
+          data-hideunsanctioned="0">
         </div>
 
-        <div class="col l6  m6 s12 oneoftwo">
-          <div class="search-container bold-text">
-            <form action="/action_page.php">
-              <input type="text" placeholder="Map name" name="search" />
-            </form>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div id="trailResults" class="col l6  m6 s12 trailListStyles">
+            <div>
+              <h6><b>Trails Nearby</b></h6>
+            </div>
           </div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          cupiditate commodi reprehenderit saepe fuga illo enim cum. Fugit,
-          reiciendis tempore consequuntur veniam perspiciatis cupiditate dolorem
-          quaerat vel id! Quae obcaecati numquam, fugit iste expedita, sapiente
-          aliquam commodi nobis nesciunt quasi inventore, sequi quidem
-          laudantium perferendis et consectetur! Quisquam, cumque ratione.
+  
+          <div class="col l6  m6 s12 oneoftwo">
+            <div class="search-container bold-text">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Map name" name="search" />
+              </form>
+            </div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            cupiditate commodi reprehenderit saepe fuga illo enim cum. Fugit,
+            reiciendis tempore consequuntur veniam perspiciatis cupiditate dolorem
+            quaerat vel id! Quae obcaecati numquam, fugit iste expedita, sapiente
+            aliquam commodi nobis nesciunt quasi inventore, sequi quidem
+            laudantium perferendis et consectetur! Quisquam, cumque ratione.
+          </div>
         </div>
       </div>
-    </div>
+
+
+</main>
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer N/A transparent">
+          <div class="container ">
+            <div class="row">
+        
+            </div>
+          </div>
+          
+          <div class="footer-copyright text-black green lighten-2">
+             <p> ©Copyright 2020 </p>
+             <p> Gold Team Rules </p>
+          </div>
+        </footer>
+
+
+       
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -179,3 +234,4 @@
     <script src="./weather.js"></script>
   </body>
 </html>
+ 
