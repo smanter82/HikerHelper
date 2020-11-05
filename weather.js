@@ -29,9 +29,12 @@ $(document).ready(function () {
   //$('#submitPlants').on('click', searchTrail);
 
   $("#textarea1").keyup(function (event) {
-    if (event.keyCode === 13) {
+    // https://stackoverflow.com/questions/155188/trigger-a-button-click-with-javascript-on-the-enter-key-in-a-text-box
+    // https://stackoverflow.com/questions/18779322/disable-new-line-in-textarea-when-pressed-enter
+    if (event.keyCode === 13 && !event.shiftKey) {
+      event.preventDefault();
       $("#submitBtn").click();
-      $("#textarea1").val("");
+      //$("#textarea1").val("");
     }
   });
 
