@@ -8,7 +8,7 @@ Technologies use:
     JavaScript & jQuery
     Third-Party APIs (https://openweathermap.org/ & https://www.hikingproject.com/)
 
-Screenshot: ![Screenshot of Wesite](./Assets/hikerHelper_screenshot.png)
+Screenshot: ![Screenshot of Wesite](./Assets/hikerHelper_screenshot2.png)
 
 Deployed app link: https://eddiephi.github.io/HikerHelper/
 
