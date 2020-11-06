@@ -1,9 +1,12 @@
+// Event listener for zip code button
 $("#submitBtn").on("click", searchZip);
 
+// Pull data from local storage
 let getStorage = localStorage.getItem("savedDetails") || "[]";
 let storageParse = JSON.parse(getStorage);
 let lastTrail = []
 
+// Fill in information from previous zip code search on page load.
 previousZip();
 
 function previousZip() {
@@ -24,6 +27,7 @@ function previousZip() {
     let longitude = response.records[0].geometry.coordinates[0];
     let latitude = response.records[0].geometry.coordinates[1];
 
+    //Pull trail information from hikingproject.com and populate trails list on page.
     let queryURL = `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&key=200961808-6d569e74377269afd022c8e12b63296c`;
 
     $.ajax({
@@ -59,7 +63,7 @@ function previousZip() {
   });
 }
 
-
+//Pull trail information from hiking project and populate trails list.
 function searchZip() {
   let zipInput = $("#textarea1").val();
   console.log(zipInput);
@@ -115,43 +119,18 @@ function searchZip() {
      
   })
 }
-//lastTrail.find <--Look this up.
-$(document).on("click", ".trailButton", function(){
-  // lastTrail.find(function($(this).text(),[i], arr),thisValue)
-  // array.find(function(currentValue, index, arr),thisValue)
-})
-function renderMap() {
-  for (let i = 0; i < response.trails.length; i++) {
-  let lat = response.trails[i].latitude;
-  let lon = response.trails[i].longitude;
-  console.log(lat)
-  // TRAILFORKS WIDGET START
-  // Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156
-  $("#renderedMap").append(`
-  <div class="TrailforksRegionInfo" 
-  data-w="600px" 
-  data-h="150px" 
-  data-rid="3156" 
-  data-counts="1" 
-  data-stats="1">
-</div>
-<div class="TrailforksWidgetMap" 
-  data-w="600px" 
-  data-h="400px" 
-  data-rid="3156" 
-  data-activitytype="1" 
-  data-maptype="trailforks" 
-  data-trailstyle="difficulty" 
-  data-controls="1" 
-  data-list="0" 
-  data-dml="1" 
-  data-layers="labels,poi,polygon,directory,region" 
-  data-z="" 
-  data-lat=${lat} 
-  data-lon=${lon}
-  data-hideunsanctioned="0">
-</div>`)
-// TRAILFORKS WIDGET END
-}
 
-};
+//If we have more time, have rendered buttons with trail names zoom in on trail's location on map
+
+// $("#trailButton").on("click", renderMap)
+ 
+// function renderMap() {
+//   for (let i = 0; i < response.trails.length; i++) {
+//   let lat = response.trails[i].latitude;
+//   let lon = response.trails[i].longitude;
+//   console.log(lat)
+  
+
+// }
+
+// };
