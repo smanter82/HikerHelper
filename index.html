@@ -138,34 +138,6 @@
         </div>
       </div>
     </div>
-      <!--trail search resuls and map-->
-    
-    <!-- TRAILFORKS WIDGET START -->
-          <!-- Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156 -->
-          <div class="TrailforksRegionInfo" 
-          data-w="600px" 
-          data-h="150px" 
-          data-rid="3156" 
-          data-counts="1" 
-          data-stats="1">
-        </div>
-        <div class="TrailforksWidgetMap" 
-          data-w="600px" 
-          data-h="400px" 
-          data-rid="3156" 
-          data-activitytype="1" 
-          data-maptype="trailforks" 
-          data-trailstyle="difficulty" 
-          data-controls="1" 
-          data-list="0" 
-          data-dml="1" 
-          data-layers="labels,poi,polygon,directory,region" 
-          data-z="" 
-          data-lat="" 
-          data-lon="" 
-          data-hideunsanctioned="0">
-        </div>
-
       </div>
 
       <div class="container">
@@ -188,6 +160,9 @@
             quaerat vel id! Quae obcaecati numquam, fugit iste expedita, sapiente
             aliquam commodi nobis nesciunt quasi inventore, sequi quidem
             laudantium perferendis et consectetur! Quisquam, cumque ratione.
+          </div>
+          <div id="renderedMap">
+            
           </div>
         </div>
       </div>
@@ -214,13 +189,10 @@
        
 
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Jquery and AJAX -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <script
       type="text/javascript"
       src="https://MomentJS.com/downloads/moment.js"
@@ -230,7 +202,9 @@
       src="https://momentjs.com/downloads/moment-with-locales.js"
     ></script>
 
+    <!--Our javaScript files-->
     <script src="./hikingTrails.js"></script>
+    <script src="./map.js"></script>
     <script src="./weather.js"></script>
   </body>
 </html>
