@@ -142,29 +142,8 @@
     
     <!-- TRAILFORKS WIDGET START -->
           <!-- Trail map embedded from https://www.trailforks.com/widgets/config/region_map/?rid=3156 -->
-          <div class="TrailforksRegionInfo" 
-          data-w="600px" 
-          data-h="150px" 
-          data-rid="3156" 
-          data-counts="1" 
-          data-stats="1">
-        </div>
-        <div class="TrailforksWidgetMap" 
-          data-w="600px" 
-          data-h="400px" 
-          data-rid="3156" 
-          data-activitytype="1" 
-          data-maptype="trailforks" 
-          data-trailstyle="difficulty" 
-          data-controls="1" 
-          data-list="0" 
-          data-dml="1" 
-          data-layers="labels,poi,polygon,directory,region" 
-          data-z="" 
-          data-lat="" 
-          data-lon="" 
-          data-hideunsanctioned="0">
-        </div>
+
+
 
       </div>
 
@@ -178,17 +157,32 @@
   
           <div class="col l6  m6 s12 oneoftwo">
             <div class="search-container bold-text">
-              <form action="/action_page.php">
-                <input type="text" placeholder="Map name" name="search" />
-              </form>
+
+              <div class="TrailforksRegionInfo" 
+              data-w="600px" 
+              data-h="150px" 
+              data-rid="3156" 
+              data-counts="1" 
+              data-stats="1">
             </div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            cupiditate commodi reprehenderit saepe fuga illo enim cum. Fugit,
-            reiciendis tempore consequuntur veniam perspiciatis cupiditate dolorem
-            quaerat vel id! Quae obcaecati numquam, fugit iste expedita, sapiente
-            aliquam commodi nobis nesciunt quasi inventore, sequi quidem
-            laudantium perferendis et consectetur! Quisquam, cumque ratione.
-          </div>
+
+              <div class="TrailforksWidgetMap s12" 
+              data-w="450px" 
+              data-h="250px" 
+              data-rid="3156" 
+              data-activitytype="1" 
+              data-maptype="trailforks" 
+              data-trailstyle="difficulty" 
+              data-controls="1" 
+              data-list="0" 
+              data-dml="1" 
+              data-layers="labels,poi,polygon,directory,region" 
+              data-z="" 
+              data-lat="" 
+              data-lon="" 
+              data-hideunsanctioned="0">
+            </div>
+
         </div>
       </div>
 
@@ -196,11 +190,16 @@
 </main>
 
         <!-- FOOTER -->
+        
+        <!-- Materialize footer was not very basic, so I had to style it in a way to erase
+             what I didn't want from the framework. If I just deleted code, the fixed margin
+             from materialize -->
+
+        
 
         <footer class="page-footer N/A transparent">
           <div class="container ">
             <div class="row">
-        
             </div>
           </div>
           
@@ -230,7 +229,8 @@
       src="https://momentjs.com/downloads/moment-with-locales.js"
     ></script>
 
-    <script src="./hikingTrails.js"></script>
+<script src="./hikingTrails.js"></script>
+    <script src="./map.js"></script>
     <script src="./weather.js"></script>
   </body>
 </html>

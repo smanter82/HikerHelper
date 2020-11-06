@@ -82,6 +82,7 @@ body {
   border-color: rgba(53, 91, 76, 0);
   height: 275px;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .trailListStyles {
