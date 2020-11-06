@@ -4,7 +4,7 @@ $("#submitBtn").on("click", searchZip);
 // Pull data from local storage
 let getStorage = localStorage.getItem("savedDetails") || "[]";
 let storageParse = JSON.parse(getStorage);
-let lastTrail = []
+
 
 // Fill in information from previous zip code search on page load.
 previousZip();
