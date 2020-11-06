@@ -91,6 +91,7 @@ function searchZip() {
       console.log(response);
       console.log(response.trails[0].name);
       lastTrail = response.trails
+      $('#trailResults').empty();
       for (let i = 0; i < response.trails.length; i++) {
         let trailName = response.trails[i].name;
         let trailLocation = response.trails[i].location;
