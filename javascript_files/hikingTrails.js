@@ -61,14 +61,14 @@ function previousZip() {
   });
 }
 
-//Use opendatasoft API to pull latitude and longitude for searched zip code at top of page.
+//Use opendatasoft API to pull latitude and longitude for searched zip code at top of page. - SM
 function searchZip() {
   let zipInput = $("#textarea1").val();
   console.log(zipInput);
 
   let zipCodeURL = `https://public.opendatasoft.com/api/records/1.0/search/?dataset=us-zip-code-latitude-and-longitude&q=${zipInput}&facet=state&facet=timezone&facet=dst`;
 
-  //Use latitude and longitude pulled from datasoft to complete ajax call to hikingproject.com
+  //Use latitude and longitude pulled from datasoft to complete ajax call to hikingproject.com - SM
   $.ajax({
     url: zipCodeURL,
     method: "GET",
@@ -77,6 +77,7 @@ function searchZip() {
     // console.log(response.records[0].geometry.coordinates[0]);
     // console.log(response.records[0].geometry.coordinates[1]);
 
+    //Set variables to pull latitude and longitude data. - SM
     let longitude = response.records[0].geometry.coordinates[0];
     let latitude = response.records[0].geometry.coordinates[1];
 
@@ -91,7 +92,7 @@ function searchZip() {
       console.log(response.trails[0].name);
       lastTrail = response.trails
 
-      //Clear trails list at start of each search so that results don't stack.
+      //Clear trails list at start of each search so that results don't stack. - SM
       $('#trailResults').empty();
 
       //Set trail information variables for ajax call and create for loop - SM
