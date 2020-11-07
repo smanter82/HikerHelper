@@ -1,4 +1,4 @@
-//Map Widget Input
+//Map Widget Input added from https://www.trailforks.com/widgets/config/region_map/?rid=3156 allows the extra piece above the map to be displayed and functionality to the trail website 
 var script = document.createElement("script"); 
         script.setAttribute("src", "https://es.pinkbike.org/ttl-86400/sprt/j/trailforks/widget.js"); document.getElementsByTagName("head")[0].appendChild(script); 
         var widgetCheck = false;
@@ -8,10 +8,13 @@ var script = document.createElement("script");
 //Global variable 
 // let lastTrail = [] 
 // //lastTrail.find <--Look this up.
+// Click event listener to target the trail button from the API
 // $(document).on("click", ".trailButton", function(){
 //   // lastTrail.find(function($(this).text(),[i], arr),thisValue)
 //   // array.find(function(currentValue, index, arr),thisValue)
 // })
+
+// A for loop to run through the trail location's latitude and longitudes to develop the map trail
 // // function renderMap() {
 // //   for (let i = 0; i < response.trails.length; i++) {
 // //   let lat = response.trails[i].latitude;
@@ -48,6 +51,8 @@ var script = document.createElement("script");
 
 // // };
 
+
+// Code added to void the NO-CORS allowance 
 // // added code from https://www.moxio.com/blog/12/how-to-make-a-cross-domain-request-in-javascript-using-cors
 // // let http_request;
 // // http_request = new XMLHTTPRequest();
@@ -57,6 +62,8 @@ var script = document.createElement("script");
 // // http_request.setRequestHeader("Content-Type", "application/json");
 // // http_request.send({ 'request': "authentication token" });
 
+
+// Ajax request below to call the map url and find the latitude and longitude from the hiking API - this code would have been added to the hiking trails JS had the map functionality worked the way we had planned
 // // let webURL = 'https://www.trailforks.com/widgets/region_map/'
 
 // // $.ajax({
