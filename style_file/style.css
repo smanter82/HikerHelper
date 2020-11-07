@@ -1,3 +1,5 @@
+/*Window level Styles*/
+
 body {
   background-image: url(../Assets/download.jpg);
 
@@ -7,11 +9,10 @@ body {
   /* Background image doesn't tile */
   background-repeat: no-repeat;
 
-  /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
+  /* Background image is fixed in the viewport */
   background-attachment: fixed;
 
-  /* This is what makes the background image rescale based
+  /* This makes the background image rescale based
      on the container's size */
   background-size: cover;
 
@@ -23,28 +24,57 @@ body {
 .head {
   position: relative;
   margin-bottom: 100px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   opacity: 0.9;
   background-color: rgb(64, 79, 66);
   font-size: 30px;
 }
 
-.icon-text {
-  font-size: 50px;
-}
-
+/*for hiking man logo in header*/
 .material-icons {
   font-size: 40px;
 }
 
+.footer-copyright {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  opacity: 0.8;
+}
+
+/*additional styles applied to materialize columns to assist with alignment and spacing*/
 .col {
   text-align: center;
   border-style: solid;
   border-width: 8px;
   border-color: rgb(31, 72, 56, 0);
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+/*Zip Code Search*/
+/*update the font styles from the original Materialize style to appear more visible against the background*/
+.zipcode {
+  border-width: 10px;
+  height: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+/*Weather Data Styles*/
+
+/*current day forcast element styles*/
+.forcast {
+  border-style: hidden;
+  border-width: 10px;
+  font-weight: bold;
+  background-color: rgb(112, 172, 131, 0.75);
+}
+
+/*change to default size on pictures from weather API*/
+.icon-text {
+  font-size: 50px;
+}
+
+/*styles for all elements in the 5-day forcast row*/
 .day {
   background-color: rgb(112, 172, 131, 0.8);
   border-style: hidden;
@@ -54,28 +84,10 @@ body {
   border-radius: 0px;
 }
 
-.zipcode {
-  border-width: 10px;
-  height: 100%;
-  font-weight: bold;
-  color: black;
-}
+/*Map*/
 
-.forcast {
-  border-style: hidden;
-  border-width: 10px;
-  font-weight: bold;
-  background-color: rgb(112, 172, 131, 0.75);
-}
-
-.map-search {
-  background-color: rgb(98, 130, 186);
-  grid-column: 2;
-  margin-left: 5px;
-  padding: 10px;
-}
-
-.oneoftwo {
+/*changes to fit map into grid framework and handle overflow*/
+.mapEl {
   background-color: rgba(109, 196, 167, 0.75);
   border-style: solid;
   border-width: 8px;
@@ -85,6 +97,9 @@ body {
   overflow-y: scroll;
 }
 
+/*Trail List Element*/
+
+/*adds color size and spacing to column in which the trail list populates from zip search*/
 .trailListStyles {
   background-color: rgba(99, 174, 149, 0.75);
   height: 275px;
@@ -92,6 +107,7 @@ body {
   overflow-y: scroll;
 }
 
+/*follwing 4 clases: dynamically created HTML and CSS identifiers from hikingTrails.js lines 46-60*/
 .trailListResults {
   align-content: flex-start;
   color: black;
@@ -103,11 +119,6 @@ body {
   font-weight: bold;
 }
 
-.trailListCheckBox {
-  color: black;
-  border-bottom: 1px, black;
-}
-
 .trailName {
   font-weight: bold;
   font-size: medium;
@@ -116,10 +127,4 @@ body {
 
 .trailData {
   font-size: small;
-}
-
-.footer-copyright {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  opacity: 0.8;
 }
