@@ -102,7 +102,7 @@ $(document).ready(function () {
       let longitude = response.coord.lon;
 
       //AJAX request of UV Index based on data from currentWeatherURL
-      let uvURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${latitude}&lon=${longitude}&appid=0f848c85d2b3dd23041f7c21a9bd6d0b`;
+      let uvURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${latitude}&lon=${longitude}&appid=0f848c85d2b3dd23041f7c21a9bd6d0b`;
       $.ajax({
         url: uvURL,
         method: "GET",
@@ -281,7 +281,7 @@ $(document).ready(function () {
       let longitude = response.coord.lon;
 
       //AJAX request of UV Index based on data from currentWeatherURL
-      let uvURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${latitude}&lon=${longitude}&appid=0f848c85d2b3dd23041f7c21a9bd6d0b`;
+      let uvURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${latitude}&lon=${longitude}&appid=0f848c85d2b3dd23041f7c21a9bd6d0b`;
       $.ajax({
         url: uvURL,
         method: "GET",
