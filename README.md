@@ -5,14 +5,25 @@ Description:
 
 Technologies use:
     HTML & CSS (Materialize.io)
+    
     JavaScript & jQuery
-    Third-Party APIs (https://openweathermap.org/ & https://www.hikingproject.com/)
+    
+    Third-Party APIs (https://openweathermap.org/, https://public.opendatasoft.com, & https://www.hikingproject.com/)
+    
+    Displayed Maps (https://www.trailforks.com/)
 
 Screenshot: ![Screenshot of Website](./Assets/hikerHelper_screenshot2.png)
 
 Deployed app link: https://eddiephi.github.io/HikerHelper/
 
 GitHub repo link:  https://github.com/EddiePhi/HikerHelper
+
+Developers:
+    https://github.com/kceberek
+    https://github.com/Bkrendan12
+    https://github.com/smanter82
+    https://github.com/EddiePhi
+    https://github.com/timvvoodman
 
 Directions for Future Development:
 
