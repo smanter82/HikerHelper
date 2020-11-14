@@ -15,9 +15,9 @@ Technologies used:
 
 Screenshot: ![Screenshot of Website](./Assets/hikerHelper_screenshot2.png)
 
-Deployed app link: https://eddiephi.github.io/HikerHelper/
+Deployed app link: https://smanter82.github.io/HikerHelper/.
 
-GitHub repo link:  https://github.com/EddiePhi/HikerHelper
+GitHub repo link:  https://github.com/smanter82/HikerHelper
 
 Developers:
     
