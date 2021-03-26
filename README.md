@@ -13,7 +13,7 @@ Technologies used:
     
     Displayed Maps (https://www.trailforks.com/)
 
-Screenshot: ![Screenshot of Website](./Assets/hikerHelperScreenshot.png)
+Screenshot: ![Screenshot of Website](./Assets/hikerHelper_screenshot.png)
 
 Deployed app link: https://smanter82.github.io/HikerHelper/.
 
